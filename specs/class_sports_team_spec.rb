@@ -47,13 +47,13 @@ class TestSportsTeam < Minitest::Test
     def test_check_player_found()
         team = team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
         check_player = team.check_player("Smith")
-        assert_equal("Smith", check_player)
+        assert_equal(true, check_player)
     end
 
     def test_check_player_not_found()
         team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
         check_player = team.check_player("Black")
-        assert_nil(nil, check_player)
+        assert_equal(false, check_player)
     end
 
     def test_team_score_won()

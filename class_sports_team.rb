@@ -37,9 +37,9 @@ class SportsTeam
 
     def check_player(name)
         for player in @players
-            return player if player == name
+            return true if player == name
         end
-        return nil
+        return false
     end
 
     def update_game_score(result)
