@@ -56,6 +56,11 @@ class TestSportsTeam < Minitest::Test
         assert_nil(nil, check_player)
     end
 
+    def test_team_score_won()
+        team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
+        game_result = team.update_game_score("won")
+        assert_equal(100, team.points())
+    end
 
 
 end
