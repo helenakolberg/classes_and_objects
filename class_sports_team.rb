@@ -29,5 +29,14 @@ class SportsTeam
         @coach = coach
     end
 
+    def check_player(name)
+        for player in @players
+            return player if player == name
+        end
+        return nil
+    end
+
+
+
 
 end
