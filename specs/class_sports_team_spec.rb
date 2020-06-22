@@ -50,5 +50,12 @@ class TestSportsTeam < Minitest::Test
         assert_equal("Smith", check_player)
     end
 
+    def test_check_player_not_found()
+        team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
+        check_player = team.check_player("Black")
+        assert_nil(nil, check_player)
+    end
+
+
 
 end
