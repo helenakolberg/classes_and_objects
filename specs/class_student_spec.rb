@@ -29,13 +29,14 @@ class TestStudent < Minitest::Test
 
     def test_talk()
         student = Student.new("Robert", "E41")
-        student.talk()
-        assert_equal("Hello!", student.talk())
+        sentence = student.talk("Hello!")
+        assert_equal("Hello!", sentence)
     end
 
     def test_favourite_language()
         student = Student.new("Tomek", "E41")
-        assert_equal("I love Ruby!", student.favourite_language("Ruby"))
+        language = student.favourite_language("Ruby")
+        assert_equal("I love Ruby!", language)
     end
 
 

@@ -22,8 +22,8 @@ class Student
     end
 
 
-    def talk()
-        return "Hello!"
+    def talk(string)
+        return string
     end
 
     def favourite_language(language)
