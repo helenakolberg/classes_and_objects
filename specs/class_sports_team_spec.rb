@@ -58,13 +58,15 @@ class TestSportsTeam < Minitest::Test
 
     def test_team_score_won()
         team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
-        game_result = team.update_game_score("won")
+        game_won = true
+        team.update_game_score(game_won)
         assert_equal(100, team.points())
     end
 
-    def test_team_score_lost()
-        team = SportsTeam.new("Bears", ["Roberts", "Evans", "Green"], "Thompson")
-        game_result = team.update_game_score("lost")
+    def test_team_won()
+        team = SportsTeam.new("Cubs", ["Smith", "Jones", "MacDonald"], "Duncan")
+        game_won = false
+        team.update_game_score(game_won)
         assert_equal(0, team.points())
     end
 

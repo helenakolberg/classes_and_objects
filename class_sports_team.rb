@@ -42,8 +42,8 @@ class SportsTeam
         return false
     end
 
-    def update_game_score(result)
-        @points += 100 if result == "won"
+    def update_game_score(game_won)
+        @points += 100 if (game_won)
     end
 
 
