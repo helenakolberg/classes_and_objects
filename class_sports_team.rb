@@ -31,9 +31,9 @@ class SportsTeam
     end
 
 
-    def set_coach(coach)
-        @coach = coach
-    end
+    # def set_coach(coach)
+    #     @coach = coach
+    # end
 
     def check_player(name)
         for player in @players
